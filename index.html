@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>evanesoteric</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/29648607?v=4" type="image/png">
+</head>
+<body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+
+    <div id="profile">
+        <div id="username"><span style="display:block;">Ev</span><a href="https://github.com/evanesoteric">@evanesoteric</a></div>
+        <div class="socials">
+            <span><a href="https://www.twitter.com/evanesoteric" target="_blank" class="socials"><i class="fa-brands fa-twitter"></i> evanesoteric</a></span>
+            <span><a href="mailto:evanesoteric@tutamail.com" target="_blank" class="socials"><i class="fa-solid fa-envelope"></i> Email</a></span>
+            <span><a href="assets/evanesoteric.key" target="_blank" class="socials"><i class="fa fa-lock"></i> GPG Key</a></span>
+        </div>
+
+        <div class="samplebox">
+            <!-- audio bar  -->
+            <div class="audio-bar">
+              <audio controls autoplay>
+                  <source src="assets/audio/sample.mp3" type="audio/mp3">
+                   Your browser does not support the audio element.
+              </audio>
+            </div>
+        </div>
+    </div>
+    <!-- // profile -->
+
+    <div id="display">
+        <div id="work">
+            <h1>Projects</h1>
+            <div class="projects" id="work_section">
+                <a href="https://github.com/evanesoteric/evanesoteric-website" target="_blank">
+                    <section>
+                        <div class="section_title">evanesoteric-website</div>
+                        <div class="about_section"> <span style="display:none;">undefined</span> </div>
+                        <div class="bottom_section"> <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span> </div>
+                    </section>
+                </a>
+                <a href="https://github.com/evanesoteric/misc" target="_blank">
+                    <section>
+                        <div class="section_title">misc</div>
+                        <div class="about_section"> <span style="display:block;">Miscellaneous scripts and notes.</span> </div>
+                        <div class="bottom_section"> <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span> </div>
+                    </section>
+                </a>
+                <a href="https://github.com/evanesoteric/napster-playlist-updater" target="_blank">
+                    <section>
+                        <div class="section_title">napster-playlist-updater</div>
+                        <div class="about_section"> <span style="display:block;">Bulk account-playlist updater for Napster.</span> </div>
+                        <div class="bottom_section"> <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span> </div>
+                    </section>
+                </a>
+                <a href="https://github.com/evanesoteric/nordvpn-geolocator" target="_blank">
+                    <section>
+                        <div class="section_title">nordvpn-geolocator</div>
+                        <div class="about_section"> <span style="display:block;">Geolocates NordVPN servers that are located in the US.</span> </div>
+                        <div class="bottom_section"> <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span> </div>
+                    </section>
+                </a>
+                <a href="https://github.com/evanesoteric/nordvpn-geolocator-website" target="_blank">
+                    <section>
+                        <div class="section_title">nordvpn-geolocator-website</div>
+                        <div class="about_section"> <span style="display:block;">Flask web app to display nordvpn geolocations.</span> </div>
+                        <div class="bottom_section"> <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python / HTML</span> </div>
+                    </section>
+                </a>
+                <a href="https://github.com/evanesoteric/spotify-v1-account-generator" target="_blank">
+                    <section>
+                        <div class="section_title">spotify-v1-account-generator</div>
+                        <div class="about_section"> <span style="display:block;">Bulk account generator for Spotify.</span> </div>
+                        <div class="bottom_section"> <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span> </div>
+                    </section>
+                </a>
+            </div>
+        </div>
+        <div id="forks" style="display:none;">
+            <h1>Forks.</h1>
+            <div class="projects" id="forks_section"></div>
+        </div>
+        <div id="blog_section" style="display:none;">
+            <h1>Blog.</h1>
+            <div id="blogs"></div>
+        </div>
+
+        <div id="footer">
+            <div class="fa-2x"><i class="fa-solid fa-skull-crossbones fa-fade" style="--fa-animation-duration: 2.2s; --fa-fade-opacity: 0.6;" ></i></div>
+            <a href="https://github.com/evanesoteric" target="_blank">evanesoteric</a>
+        </div>
+
+    </div>
+    <!-- // display -->
+
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+    </script>
+
+    <script>
+      const magicProjectsGrid = new MagicGrid({
+        container: "#work_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
+
+      const magicForksGrid = new MagicGrid({
+        container: "#forks_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
+
+      $("document").ready(() => {
+        magicProjectsGrid.listen();
+        magicForksGrid.listen();
+      });
+    </script>
+</body>
+</html>
